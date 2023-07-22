@@ -24,18 +24,14 @@ export default class NewNoteForm extends Component {
       // method should resolve to a user object 
 
       const user = await createNote(this.state);
-      console.log(this.state);
-      //this.props.setUser(user);
+
     } catch {
-      // An error occurred
-      // Probably due to a duplicate email
       this.setState({ error: 'Save Failed - Try Again' });
       console.log(this.state);
     }
   };
 
   render() {
-    //const disable = this.state.password !== this.state.confirm;
     return (
       <div>
         <div className="form-container">
@@ -50,13 +46,9 @@ export default class NewNoteForm extends Component {
         <p className="error-message">&nbsp;{this.state.error}</p>
         <br />
         <div className="form-container">
-        <form autoComplete="off" onSubmit={this.handleSubmit}>
 
-        </form>
-
+ 
         </div>
-
-
       </div>
 
         
