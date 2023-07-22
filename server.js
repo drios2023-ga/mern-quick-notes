@@ -9,6 +9,9 @@ require('./config/database');
 
 const app = express();
 
+//creates router for the notes pages
+//let notesRouter = require('./routes/notes');
+
 app.use(logger('dev'));
 app.use(express.json());
 
@@ -25,6 +28,11 @@ const port = process.env.PORT || 3001;
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+
+//here we use the notes routes
+app.use('/api/notes', require('./routes/api/notes'));
+//app.use('/notes', notesRouter);
+
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX/API requests
