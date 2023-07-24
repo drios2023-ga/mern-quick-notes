@@ -1,12 +1,18 @@
-import NewNoteForm from '../../components/NewNoteForm/NewNoteForm'
+import NewNoteForm from '../../components/NewNoteForm/NewNoteForm';
+import NotesList from '../../components/NotesList/NotesList';
 
-export default function NewNotePage({user}) {
+export default function NewNotePage({usernotes}) {
+  
+
   
     return (
       <main>
         <h1>New Note Page</h1>
         {
-            <NewNoteForm></NewNoteForm>
+            <>
+            <NewNoteForm />
+            <NotesList usernotes={usernotes} />
+            </>
         }
       </main>
     );

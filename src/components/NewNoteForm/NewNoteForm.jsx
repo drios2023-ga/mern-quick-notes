@@ -27,7 +27,7 @@ export default class NewNoteForm extends Component {
 
     } catch {
       this.setState({ error: 'Save Failed - Try Again' });
-      console.log(this.state);
+      //(this.state);
     }
   };
 
@@ -45,10 +45,6 @@ export default class NewNoteForm extends Component {
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
         <br />
-        <div className="form-container">
-
- 
-        </div>
       </div>
 
         

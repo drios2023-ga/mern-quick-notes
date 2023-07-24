@@ -4,6 +4,7 @@ const router = express.Router();
 
 // All paths start with '/api/notes'
 router.post('/', notesCtrl.create);
-console.log('routing');
+
+router.get('/new', notesCtrl.show)
 
 module.exports = router;
