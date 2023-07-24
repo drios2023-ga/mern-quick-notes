@@ -29,7 +29,7 @@ async function show(req, res){
     const notes = await Note.find({}).exec();
     
     console.log(notes);
-    res.JSON(notes);
+    res.json(notes);
 
   } catch (err) {
     res.status(400).json(err);

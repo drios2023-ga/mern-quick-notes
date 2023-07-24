@@ -47,9 +47,6 @@ export default class NewNoteForm extends Component {
         <br />
       </div>
 
-        
-
-
     );
   }
 }
