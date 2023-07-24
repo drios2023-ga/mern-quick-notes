@@ -26,7 +26,7 @@ async function show(req, res){
   try{
 
     //const notes = await Note.find({user: req.user.id}).exec();
-    const notes = await Note.find({}).exec();
+    const notes = await Note.find({user: req.user._id}).exec();
     
     console.log(notes);
     res.json(notes);

@@ -36,10 +36,10 @@ useEffect(() => {
             <NavBar user={user} setUser={setUser} />
             <Routes>
               {/* Route components in here */}
-              <Route path="/orders/new" element={<NewOrderPage />} />
-              <Route path="/orders" element={<OrderHistoryPage />} />
-              <Route path="/notes" element ={<NotesPage usernotes={notes} />} />
-              <Route path="/notes/new" element={<NewNotePage usernotes={notes}/>}  />
+              <Route path="/orders/:id/new" element={<NewOrderPage />} />
+              <Route path="/orders/:id" element={<OrderHistoryPage />} />
+              <Route path="/notes/:id" element ={<NotesPage usernotes={notes} />} />
+              <Route path="/notes/new/:id" element={<NewNotePage usernotes={notes}/>}  />
             </Routes>
           </>
           :
